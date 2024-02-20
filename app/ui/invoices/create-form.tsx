@@ -129,6 +129,9 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                   {error}
                 </p>
               ))}
+            {state.errors && state.message && (
+              <p className="mt-2 text-sm text-red-500">{state.message}</p>
+            )}
           </div>
         </fieldset>
       </div>
